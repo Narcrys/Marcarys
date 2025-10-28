@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcarys - Menu</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #0b0b2a, #000);
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .title {
+      font-size: 3em;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+      margin-bottom: 50px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffff; }
+      to { text-shadow: 0 0 25px #00ffff; }
+    }
+
+    .menu-buttons button {
+      background-color: transparent;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #00ffff;
+      color: #000;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.7em;
+      color: #888;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1 class="title">Marcarys</h1>
+    <div class="menu-buttons">
+      <button id="btnPlay">▶️ Jogar</button>
+      <button id="btnOptions">⚙️ Opções</button>
+      <button id="btnCredits">👥 Créditos</button>
+      <button id="btnExit">🚪 Sair</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Marcarys Studio | Hospedado no 
+      <a href="https://github.com" target="_blank">GitHub Pages</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("btnPlay").addEventListener("click", () => {
+      alert("Iniciando o jogo Marcarys...");
+      // Aqui você pode redirecionar para o jogo real:
+      // window.location.href = "game.html";
+    });
+
+    document.getElementById("btnOptions").addEventListener("click", () => {
+      alert("Tela de opções em desenvolvimento!");
+    });
+
+    document.getElementById("btnCredits").addEventListener("click", () => {
+      alert("Marcarys - Criado por você 😎");
+    });
+
+    document.getElementById("btnExit").addEventListener("click", () => {
+      alert("Saindo do jogo...");
+      // window.close() não funciona em navegadores comuns
+    });
+  </script>
+</body>
+</html>
